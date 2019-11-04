@@ -1,23 +1,22 @@
 
-<html>
+function Validation() {
+    var date = document.getElementById('birthday').value; //selection d un seul elmt  
+    var error = '';
+    //element html
+    //ou
+    //document.querySelector('#birthday').value;
+    //(selecteur css)  
+    //selection d'un seul element
+    var list = document.querySelectorAll('input');
+    list.forEach(function (inputItem) { //une boucle foreach
+        if (inputItem.value.length < 5) {
+            var id = inputItem.id;
+            var label = document.querySelector("[for='"+id+"']").textContent
+            error += label + ' vide <br/>';
+        }
+    });
 
-<head>
-    <title>Validation Javascript</title>
-<script type='text/javascript' src='formulaire.js'>
-    function Validation(){
-        var date=document.getElementById('birthday').value//selection d un seul elmt  
-        //element html
-        //ou
-        //document.querySelector('#birthday').value
-        //(selecteur css)  
-        //selection d'un seul element
-        //var list=document.querrySelectorAll('input'); 
-        //list.forEach(function(InputItem){ une boucle foreach
-        //if(inputItem.value.length<5){
-        //error+='champ vide';   
-<input type="button" value="Valider" onclick="validation()"></input>
+    if(error != ''){
+        document.getElementById('error').innerHTML = error;
     }
-
-</script>
-</head>
-</html>
+}
