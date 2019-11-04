@@ -17,8 +17,15 @@
               font-size: 16px;
               margin:auto;
               max-width: 800px;   
-              } 
+              }  
+              h3{
+               background:pink;
+               padding:5px;
+               border:1px solid black;              
+              }
                 
+
+          
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
@@ -57,11 +64,22 @@
 
     <p>
         <label for='mail'>Mail</label>
-        <input type='text' id='guylsoro@gmail.com' name='guylsoro@gmail.com'/>
+        <input type='email' id='mail' name='guylsoro@gmail.com'/>
     </p>
 
     
-<input type='button' value='valider'>
+<input type='submit' value='valider'>
+
+<div id='error'> 
+<h3>Le nom doit contenir au moins 5 caractères</h3>
+</div>
+
+
+
+
+        
+        
+
       
         <!-- Add your site or application content here -->
 

@@ -16,9 +16,18 @@
             font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
               margin:auto;
-              max-width: 800px;   
-              } 
+              max-width: 800px; 
+              
                 
+                  
+              }   
+                h3{
+                    background:green ;
+                    padding: 5px;
+                    color:white;
+                } 
+
+          
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
@@ -32,12 +41,12 @@
         <body>
                 
         <form method='post' action='nom'></form><br>
-    
+    <form onsubmit='validation()'>
     
         <p>
         <label for='nom'>Nom</label>
-        <input type='text' id='SOROO' name='SOROO'/>
-        </p>
+        <input type='text' id='nom' name='nom'/>
+    </p>
     
                     
                             
@@ -57,11 +66,20 @@
 
     <p>
         <label for='mail'>Mail</label>
-        <input type='text' id='guylsoro@gmail.com' name='guylsoro@gmail.com'/>
+        <input type='email' id='mail' name='guylsoro@gmail.com'/>
     </p>
 
     
-<input type='button' value='valider'>
+<input type='submit' value='valider'>
+<div id='resultat'>
+    <h3>Bienvenue GUY LANDRY</h3>
+     </div>
+
+    </form>
+
+        
+        
+
       
         <!-- Add your site or application content here -->
 
