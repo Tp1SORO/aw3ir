@@ -1,137 +1,85 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TP2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style>
-            body{
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <style>
+        body {
             width: 780px;
             font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            
             font-size: 16px;
             margin: auto;
             max-width: 800px;
-            background-color: grey;
-        }
 
-        label {
-            width: 200px;
-            display: inline-block;
 
-        }
 
-        h4 {
-            background: pink;
-            padding: 5px;
-            border: 1px solid black;
         }
 
         h3 {
             background: green;
             padding: 5px;
             color: white;
-
-        }
-
-        #error {
-
-            background-color: rgb(224, 12, 189);
-            padding: 10px;
-            border: 1px rgb (0, 0, 0);
-
-        }
-
-        #resultat {
-            background-color: rgb(46, 187, 27);
-            padding: 10px;
-            border: rgb (255, 255, 255);
-        }
-
-
-        #submit {
-            margin-bottom: 10 px;
-        }
-
-        #space {
-
-            padding: 1%;
-
-
         }
     </style>
 
     <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
     <!--<link rel="stylesheet" href="style.css">-->
-    <script src="formulaire.js"></script>
+    <!--<script src="js/main.js"></script>-->
+</head>
 
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <head>        
-        <h1>Saisie d'une fiche "Personne"</h1>
-        </head>
+<head>
+    <link rel="stylesheet" href="formulaire.css" />
+    <script type="text/javascript" src="formulaire.js"></script>
+    <h1>Saisie d'une fiche "Personne"</h1>
 
-        <body>
-                
-        <form method='post' action='nom'></form><br>
-    
-    
+</head>
+
+<body>
+    <form>
         <p>
-        <label for='nom'>Nom</label>
-        <input type='text' id='SOROO' name='SOROO'/>
+            <label for="nom">Nom </label>
+            <input type="text" id="nom" name="nom">
         </p>
-    
-                    
-                            
 
-    <p>
-        <label for='prénom'>Prénom</label>
-        <input type='text' id='GUY LANDRY' name='GUY LANDRY'/>
-    </p>
-    <p>
-        <label for='address'>Adresse</label>
-        <input type='text' id='address' name='address' minlength='5' maxlength='50' />
+        <p>
+            <label for="prénom">Prénom </label>
+            <input type="text" id="prenom" name="prénom">
+        </p>
+        <p>
+            <label for="datedenaissance">Date de naissance </label>
+            <input type="date" id="datedenaissance" name="datedenaissance" placeholder="jj/mm/aaaa">
+        </p>
+        <p>
 
-    
-<p>
-        <label for='date de naissance'> Date de naissance</label>
-        <input placeholder='JJ/MM/AAAA' type='text' id='02/06/2000' name='02/06/2000'/>
-</p>    
+            <label for="adresse">Adresse </label>
 
-    </p>
-        <label for='address'>Adresse</label>
-        <input type='text' id='13 RUE LOUNES MATOUB' name='13 RUE LOUNES MATOUB'/>
-</p>
+            <input type='text' id="adresse" name="adresse" />
+        </p>
 
-    <p>
+        <p>
+            <label for="email"> Email</label>
 
-        <label for='Email'>email</label>
-        <input type='Email' id='mail' name='mail' minlength='5' maxlength='30' />
-    </p>
+            <input type="email" id="email" pattern=".+@globex.com" size="20" required>
 
-    <div>
-        <input type='submit' id='bouton envoi' value='valider' onclick="Validation()">
+        </p>
+        <p>
+            <input type='submit' id='bouton_envoi' value='VALIDER' onclick='validation()' />
+        </p>
 
-    </div>
-    <div id='error'></div>
 
-    <div id='space'></div>
-    <div id='resultat'></div>
 
-<!-- Add your site or application content here -->
-
+    </form>
+    <div id="error"> </div>
+    <div id="space"> </div>
+    <div id="resultat"> </div>
 </body>
 
 </html>
-
-
